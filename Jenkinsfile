@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	stages {
-		stages('Descargar Código') {
+		stage('Descargar Código') {
 			steps {
 				echo 'Clonando el repositorio...'
 				git branch: 'desarrollo', url:
