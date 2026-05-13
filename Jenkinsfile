@@ -19,8 +19,7 @@ pipeline {
 			echo 'Buscando vulnerabilidades criticas...'
 			// Ejecutamos Trivy en la plaza del pueblo
 
-			sh 'docker run --rm -v
-/var/run/docker.sock:/var/run/docker.sock aquasec/trivy image --exit-code 1 --severity CRITICAL mi-app-segura:latest'
+			sh 'docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image --exit-code 1 --severity CRITICAL mi-app-segura:latest'
 }
 }
 	stage('Despliegue en Produccion') {
